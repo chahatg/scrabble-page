@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+
+   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Advent+Pro%7CBangers%7CSlackey%7CSigmar+One%7CRighteous%7CUbuntu">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <title>SCRABBLE</title>
+
+  <!--  Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+
+  <!--  Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+
+  <!--  jQuery UI Theme -->
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/dark-hive/jquery-ui.min.css">
+
+  <!--  CSS file to override stuff, different file so I can modify stuff and rewrite the CSS. -->
+  <link rel="stylesheet" href="css/style.css">
+
+
+  <link rel="shortcut icon" href="img/title_img.png" >
+</head>
+<body>
+  <!--  Navbar div. See html/navbar.html for that code. It gets loaded into this
+        div by the JS at the bottom of this page. -->
+  <div id="NavBarHeader"></div>
+  <div id="main_container"
+    <!-- Heading - game's name -->
+    <div class="row">
+      <div class="col-md-12">
+        <h1 class="name">
+          <span class="highlight_title">SCRABBLE</span> <!--highlight_fun-->
+        </h1>
+      </div>
+      <div class="col-md-4"></div>
+
+      <div class="col-md-4"></div>
+    </div>
+
+    <br>
+
+    <!-- Game board -->
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="center_things"> <!--center_text_images -->
+          <img class="resizeBoard" id="the_gameBoard" src="img/scrabble/scrabbleBoardLine.png"> <!--resize_board, the_board-->
+          <div id="board"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scoreboard -->
+    <div class="row">
+      <div class="col-md-4"></div>
+      <div class="col-md-4">
+        <div class="center_n_highlight"> Word: <span id="word">____</span> </div> <!-- highlight_centered-->
+        <div class="center_n_highlight">Score: <span id="score">0</span> </div>
+      </div>
+      <div class="col-md-4"></div>
+    </div>
+
+    <!-- TODO, add buttons for stuff. -->
+
+
+    <br><br>
+
+    <!-- scrabble tiles and rack -->
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="center_things">
+          <img class="resizeRack" id="playerRack" src="img/scrabble/Scrabble_Rack_flat.png">
+          <div id="rack"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>          <!-- This should be the end div of the main container. -->
+
+
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins). -->
+  <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script type='text/javascript' src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+
+  <!-- jQuery Validation plugin -->
+  <script type='text/javascript' src="https://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.js"></script>
+  <script type='text/javascript' src="https://cdn.jsdelivr.net/jquery.validation/1.14.0/additional-methods.js"></script>
+
+  <!-- jQuery UI Slider and Tab Wigets -->
+  <script type='text/javascript' src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+  <!-- JS file to handle the scrabble game. -->
+  <script type='text/javascript' src="js/scrabble.js"></script>
+
+  <!-- Load the header/footer when the page is ready. Also load the validate() function -->
+  <script>
+
+    $( document ).ready(function() {
+        $("#TheFooter").load("html/footer.html");
+
+        load_scrabble_tiles();     // Load up the 7 random Scrabble pieces.
+        load_droppable_targets();   // Load up the 15 targets for the Scrabble pieces.
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,110 @@
+
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+body {
+  background-image: url('../img/Scrabble/background-img.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
+  font-family: "Advent Pro";
+}
+
+body > .container {
+  padding: 60px 10px 0;
+}
+
+body > .row {
+  margin: 10px;
+}
+
+html {
+  min-height: 100%;
+  position: relative;
+  width: 100%;
+}
+
+.center_things {
+  margin: auto;
+  text-align: center;
+}
+
+.resizeBoard {
+  height: 125px;
+  width: auto;
+}
+
+.resizeRack {
+  height: 125px;
+  width: 1200px;
+}
+
+.tiles {
+  height: 100px;
+  width: 100px;
+}
+
+.droppable {
+  height: 125px;
+  width: 118px;
+}
+
+
+
+.about {
+  color: white;
+  text-align: center;
+}
+
+.center_text {
+  color: white;
+  font-family: "Advent Pro";
+  font-size: 200%;
+  font-weight: 900;
+  text-align: center;
+}
+
+.center_text_nohighlight {
+  color: black;
+  font-size: 200%;
+  text-align: center;
+}
+
+.center_text_small {
+  color: white;
+  font-family: "Advent Pro";
+  font-size: 120%;
+  font-weight: 900;
+  text-align: center;
+}
+
+h1.name {
+  color: white;
+  font-family: "Advent pro";
+  font-size: 750%;
+  text-align: center;
+}
+
+
+.center_n_highlight
+{
+  color: white;
+  font-family: "Advent Pro";
+  font-size: 200%;
+  font-weight: 900;
+  text-align: center;
+}
+
+.col-md-4
+{
+  background-color: black;
+}
